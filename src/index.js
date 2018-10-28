@@ -10,8 +10,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // // Learn more about service workers: http://bit.ly/CRA-PWA
 // serviceWorker.register();
 
-if (('serviceWorker' in navigator) && (window.location.pathname === '/macropecas/')) {
-  console.log(window.location)
+if (('serviceWorker' in navigator)) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('sw.js')
     .then(function(){
